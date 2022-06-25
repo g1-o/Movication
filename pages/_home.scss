@@ -1,0 +1,32 @@
+main>* {
+    padding-top: $margin-big;
+}
+
+.features {
+    min-height: 30vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+    padding: $margin-big 0;
+    background-image: linear-gradient(to bottom, $c6 2%, rgba($c6, 0.8), $c3);
+    /*  &>*:not(:last-child)::after {
+        content: "";
+        width: 3rem;
+        height: 3rem;
+        border-right: 2px solid black;
+        display: inline-block;
+        align-self: flex-end;
+    }*/
+}
+
+.plans {
+    background-image: linear-gradient(to bottom, $c3 1%, rgba($c3, 0.4));
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    padding: $margin-big 0;
+}

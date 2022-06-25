@@ -1,0 +1,49 @@
+//colors
+$c7: rgba(19, 3, 3, 1);
+$c6: rgba(45, 8, 10, 1);
+$c5: rgba(124, 54, 38, 1);
+$c4: rgba(245, 133, 63, 1);
+$c3: rgb(253, 206, 190);
+$c1: rgba(254, 235, 244, 1);
+$c2: rgba(225, 204, 213, 1);
+$white: rgb(255, 255, 255);
+$gray: rgb(235, 235, 235);
+$gray-dark: gray;
+$gray-dark-o: rgb(200, 200, 200);
+$black: rgb(0, 0, 0);
+//shadows
+$shadow-gray: rgba(0, 0, 0, 0.1);
+$t-shadow-var: 2px 2px $shadow-gray;
+//fonts
+$font-style: 'Titillium Web',
+sans-serif;
+$font-2: 'Allison',
+cursive;
+//margins
+$margin-small:1.5rem;
+$margin-mid: 3rem;
+$margin-big: 7rem;
+
+$bp-large: 68.75em;
+
+html {
+    font-size: 62.5%; //1rem=10px;
+    box-sizing: border-box;
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+body {
+    font-family: $font-style;
+    color: $black;
+}

@@ -1,0 +1,200 @@
+.header {}
+
+.intro {
+    position: absolute;
+    @include center;
+    color: $white;
+    padding: 2rem;
+    text-align: center;
+    @media only screen and (max-width: $bp-large) {
+        width: 80%;
+        padding: 1rem;
+    }
+    &-h1 {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+        @media only screen and (max-width: $bp-large) {
+            font-size: 3rem;
+        }
+    }
+    p {
+        margin-top: 2rem;
+    }
+    form {
+        margin-top: 1rem;
+        input[type="email"] {
+            padding: 0.7rem 1rem;
+            width: 80%;
+            @media only screen and (max-width: $bp-large) {
+                width: 50%;
+            }
+            background: rgba($gray, $alpha: 0.3);
+            border: 1px solid transparent;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            &::placeholder {
+                color: $c2;
+            }
+            &:focus {
+                border: 1px solid white;
+                outline: none;
+                border-radius: 0;
+                transition: 0.5s;
+            }
+        }
+        input[type="submit"] {
+            padding: 0.8rem 1rem;
+            border: none;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            background: rgba($gray, $alpha: 0.8);
+            min-width: 15%;
+            margin-left: -0.7rem;
+            &:hover {
+                background-color: rgba($gray, $alpha: 1);
+            }
+        }
+    }
+    .packs {
+        background: transparent;
+        color: rgba($gray, $alpha: 1);
+        position: absolute;
+        @include center-h;
+        margin-top: 3rem;
+        border: none;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            @include center-h;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-top: 0.5rem;
+            border-bottom: 1px solid white;
+            border-left: 1px solid white;
+            transform: rotate(-45deg);
+            transition: 0.3s;
+        }
+        &:hover::after {
+            margin-top: 1rem;
+        }
+    }
+        
+}     
+
+.top-nav {
+    .logo {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        border-radius: 1rem;
+        padding: 1rem 3rem;
+        @include center-h;
+        &>* {
+            color: $c3;
+            top: 5rem
+        }
+        &-svg {
+            width: 3rem;
+            height: 3rem;
+            fill: $c3;
+            margin: 0 0 -1rem -1.5rem;
+        }
+        &-label {
+            font-family: $font-2;
+            font-size: 6rem;
+        }
+    }
+}
+
+.background {
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: repeat(5, calc(calc(100vw - 8rem)/5));
+    grid-template-rows: repeat(5, calc(calc(100vh - 4rem)/5));
+    grid-row-gap: 1rem;
+    grid-column-gap: 2rem;
+    background-color: $black;
+    position: relative;
+    z-index: -5;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to top, $c6 2%, rgba($c6, 0.9), rgba($black, 0.82) 50% 100%);
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+    &-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 1.5rem;
+        &-1 {
+            grid-column: 1/ 3;
+            grid-row: 1/2;
+        }
+        &-2 {
+            grid-column: 3/5;
+            grid-row: 1/2;
+        }
+        &-3 {
+            grid-column: 5/6;
+            grid-row: 1/3;
+            z-index: 2;
+        }
+        &-4 {
+            //escape
+            grid-column: 4/5;
+            grid-row: 2/3;
+        }
+        &-5 {
+            //conj
+            grid-column: 1/2;
+            grid-row: 2/4;
+        }
+        &-6 {
+            //jum
+            grid-column: 4/6;
+            grid-row: 3/5;
+        }
+        &-7 {
+            //meg
+            grid-column: 3/4;
+            grid-row: 2/4;
+        }
+        &-8 {
+            //ven
+            grid-column: 2/3;
+            grid-row: 2/3;
+        }
+        &-9 {
+            //ten
+            grid-column: 3/4;
+            grid-row: 4/5;
+        }
+        &-10 {
+            //hus
+            grid-column: 2/3;
+            grid-row: 3/5;
+        }
+        &-11 {
+            grid-column: 2/3;
+            grid-row: 5/6;
+        }
+        &-12 {
+            //aqua
+            grid-column: 1/2;
+            grid-row: 4/6;
+        }
+        &-13 {
+            grid-column: 3/5;
+            grid-row: 5/6;
+        }
+        &-14 {
+            grid-column: 5/6;
+            grid-row: 5/6;
+        }
+    }
+}

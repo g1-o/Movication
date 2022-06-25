@@ -1,0 +1,11 @@
+.join {
+    background-color: $c1;
+    border-radius: 1rem;
+    color: $c6;
+    border: none;
+    padding: 1.5rem 2.5rem;
+    margin: 1rem auto;
+    &:hover {
+        animation: btn-hover 0.6s;
+    }
+}

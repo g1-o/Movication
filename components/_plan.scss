@@ -1,0 +1,34 @@
+.plan {
+    background-color: rgba($c5, 0.1);
+    height: 35rem;
+    width: calc(85% / 4);
+    padding: $margin-small $margin-mid;
+    border-radius: 1rem;
+    &-name {
+        text-align: center;
+        font-family: $font-2;
+        font-size: 4rem;
+        text-shadow: $t-shadow-var;
+        color: rgba($gray-dark, 1);
+        padding: 1rem 0;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        width: 90%;
+    }
+}
+
+.price {
+    padding: $margin-small 0;
+    &-num {
+        font-size: 5rem;
+        text-align: center;
+    }
+    &-egp {
+        text-align: end;
+    }
+}
+
+.pro {
+    padding: 0.2rem 0;
+}

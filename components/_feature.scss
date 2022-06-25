@@ -1,0 +1,26 @@
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: $gray;
+    border-radius: 5px;
+    i {
+        background-clip: text;
+        margin-bottom: $margin-small;
+        &::before{
+        color: $c3;
+        font-size: 4rem;
+        }
+    }
+    &-paragraph {
+        width: 25rem;
+    }
+    &-btn {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+}
